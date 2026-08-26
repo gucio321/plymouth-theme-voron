@@ -3,7 +3,7 @@
 ## Github : @gucio321
 #
 # Settings
-YScaleFactor = 8;
+YScaleFactor = 10;
 
 // Screen size
 screen.w = Window.GetWidth();
