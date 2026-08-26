@@ -1,14 +1,11 @@
 #!/bin/bash
-rm -rf frames
-mkdir -p frames
-
 ffmpeg -y \
   -loop 1 -i logo.png \
-  -f lavfi -i "color=c=black@0:s=600x600:r=30" \
+  -f lavfi -i "color=c=black@0:s=400x400:r=30" \
   -filter_complex "
     [0:v]
       format=rgba,
-      scale=400:400:force_original_aspect_ratio=decrease,
+      scale=300:300:force_original_aspect_ratio=decrease,
 
       rotate=
         '2*PI*(t/3 + 0.035*sin(4*PI*t/3))':
