@@ -3,10 +3,10 @@
 ## Github : @gucio321
 
 // Screen size
-screen.w = Window.GetWidth(0);
-screen.h = Window.GetHeight(0);
-screen.half.w = Window.GetWidth(0) / 2;
-screen.half.h = Window.GetHeight(0) / 2;
+screen.w = Window.GetWidth();
+screen.h = Window.GetHeight();
+screen.half.w = Window.GetWidth() / 2;
+screen.half.h = Window.GetHeight() / 2;
 
 // Question prompt
 question = null;
@@ -27,25 +27,25 @@ state.time = 0.0;
 //--------------------------------- Refresh (Logo animation) --------------------------
 
 # cycle through all images
-text_image = Image("text.png")
+#text_image = Image("text.png")
 for (i = 0; i < 90; i++)
   flyingman_image[i] = Image("progress-" + i + ".png");
 flyingman_sprite = Sprite();
 
 # set image position
-flyingman_sprite.SetX(Window.GetX() + (Window.GetWidth(0) / 2 - flyingman_image[0].GetWidth() / 2)); # Place images in the center
-flyingman_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - flyingman_image[0].GetHeight() / 3));
+flyingman_sprite.SetX(Window.GetX() + (Window.GetWidth() / 2 - flyingman_image[0].GetWidth() / 2)); # Place images in the center
+flyingman_sprite.SetY(Window.GetY() + (Window.GetHeight() / 2 - flyingman_image[0].GetHeight() / 3));
 
-text_sprite = Sprite();
-text_sprite.SetX(Window.GetX() + (Window.GetWidth(0) / 2 - text_image.GetWidth() / 2)); # Place images in the center
-text_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - text_image.GetHeight()*2 / 3));
+#text_sprite = Sprite();
+#text_sprite.SetX(Window.GetX() + (Window.GetWidth(0) / 2 - text_image.GetWidth() / 2)); # Place images in the center
+#text_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - text_image.GetHeight()*2 / 3));
 
 progress = 0;
 
 fun refresh_callback ()
   {
     flyingman_sprite.SetImage(flyingman_image[Math.Int(progress / 1.5) % 90]);
-    text_sprite.SetImage(text_image)
+    #text_sprite.SetImage(text_image)
     progress++;
   }
   
