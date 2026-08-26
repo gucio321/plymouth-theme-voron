@@ -33,12 +33,12 @@ for (i = 0; i < 90; i++)
 flyingman_sprite = Sprite();
 
 # set image position
-flyingman_sprite.SetX(Window.GetX() + (Window.GetWidth() / 2 - flyingman_image[0].GetWidth()*3 / 4)); # Place images in the center
-flyingman_sprite.SetY(Window.GetY() + (Window.GetHeight() / 2 - flyingman_image[0].GetHeight() / 2));
+flyingman_sprite.SetX(Window.GetX() + (Window.GetWidth() / 2 - flyingman_image[0].GetWidth() / 2)); # Place images in the center
+flyingman_sprite.SetY(Window.GetY() + (Window.GetHeight() - flyingman_image[0].GetHeight()) / 4);
 
 text_sprite = Sprite();
 text_sprite.SetX(Window.GetX() + (Window.GetWidth(0) / 2 - text_image.GetWidth() / 2)); # Place images in the center
-text_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - text_image.GetHeight() / 4));
+text_sprite.SetY(Window.GetY() + ((Window.GetHeight(0) - text_image.GetHeight())*3 / 4));
 
 progress = 0;
 
