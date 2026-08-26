@@ -1,4 +1,4 @@
-# Plymouth theme for @VoronDesign controller
+# Plymouth theme for @VoronDesign host.
 ## Installation
 1. Clone the repository `git clone https://github.com/gucio321/plymouth-theme-voron`
 2. Install the theme `sudo make install`
