@@ -29,7 +29,7 @@ state.time = 0.0;
 # cycle through all images
 text_image = Image("text.png");
 for (i = 0; i < 90; i++)
-  flyingman_image[i] = Image("progress-" + i+1 + ".png");
+  flyingman_image[i] = Image("progress-" + (i+1) + ".png");
 flyingman_sprite = Sprite();
 
 # set image position
